@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	Open Manager, an open source file manager for the Android system
+    Copyright (C) 2009, 2010, 2011  Joe Berria <nexesdevelopment@gmail.com>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+ 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/offWhite">
+    <TextView
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:background="@color/offWhite"
+    	android:textColor="@color/black"
+    	android:id="@+id/storage_label" />
+   
+    	<LinearLayout
+    		android:orientation="horizontal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:gravity="center">
+    		<ImageView 
+    	    android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+    	    android:src="@drawable/back"
+    	    android:clickable="true"
+    	    android:id="@+id/back_button"/> 
+    	    <ImageView 
+    	    android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="0"
+    	    android:src="@drawable/ic_launcher"/> 
+    	    <TextView
+	    	android:textColor="@color/black"
+	    	android:layout_weight="2"
+	    	android:textSize="20sp"
+	    	android:text="SimpLock"
+	    	android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"/>
+    	    <ImageView 
+    	    android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+    		
+    	    android:src="@drawable/multiselect_38"
+    	    android:clickable="true"
+    	    android:id="@+id/multiselect_button"/> 
+
+    		 <ImageView
+    		     android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+   
+    		     android:id="@+id/option"
+    		     android:clickable="true"
+    		     android:src="@drawable/option" />
+    		
+    	</LinearLayout>
+    
+    	<TextView
+	    	android:id="@+id/path_label"
+	    	android:text="path is"
+	    	android:textColor="@color/black"
+	    	android:background="@color/white"
+	    	android:maxLines="1"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:layout_weight="0"/>
+	    <TextView
+	    	android:id="@+id/detail_label"
+	    	android:textColor="@color/brightRed"
+	    	android:background="@color/white"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:gravity="center"
+	    	android:layout_weight="0"/>
+    	<ListView
+    		android:layout_width="fill_parent"
+    		android:layout_height="fill_parent"
+    		android:layout_weight="2"
+    		android:drawSelectorOnTop="true"
+    		android:smoothScrollbar="true"
+    		android:longClickable="true"
+    		android:background="@color/white"
+    		android:id="@+id/android:list"/>
+    		
+    <!--  Footer for Multi-select buttons -->
+     <HorizontalScrollView
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:scrollbars="none">
+    <LinearLayout
+    	android:id="@+id/hidden_buttons"
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:background="@color/white"
+    	android:visibility="gone">   
+    	<ImageView 
+    	    android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+    	    android:src="@drawable/share"
+    	    android:clickable="true"
+    	    android:id="@+id/hidden_attach"/> 
+    	 <ImageView 
+    	    android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+    	    android:src="@drawable/selectall"
+    	    android:clickable="true"
+    	    android:id="@+id/hidden_selectall"/> 
+    	   <ImageView 
+    	    android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+    	    android:src="@drawable/unhide"
+    	    android:clickable="true"
+    	    android:id="@+id/hidden_unhideall"/> 
+    	    <ImageView 
+    	    android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+    	    android:src="@drawable/lock"
+    	    android:clickable="true"
+    	    android:id="@+id/hidden_lock"/> 
+    	    <ImageView 
+    	    android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+    	    android:src="@drawable/unlock"
+    	    android:clickable="true"
+    	    android:id="@+id/hidden_unlock"/> 
+    	    <ImageView 
+    	    android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+    	    android:src="@drawable/delete"
+    	    android:clickable="true"
+    	    android:id="@+id/hidden_delete"/> 
+    	    <ImageView 
+    	    android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+    	    android:src="@drawable/copy"
+    	    android:clickable="true"
+    	    android:id="@+id/hidden_copy"/> 
+    	    <ImageView 
+    	    android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+    	    android:src="@drawable/move"
+    	    android:clickable="true"
+    	    android:id="@+id/hidden_move"/> 
+    	
+  
+    </LinearLayout>	
+     </HorizontalScrollView>	
+     <LinearLayout
+    	android:id="@+id/pastehere"
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:background="@color/white"
+    	android:visibility="gone">    
+    	<Button
+    		android:id="@+id/pasteherebut"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+    		android:text="Paste Here" />
+    	</LinearLayout>
+    	<LinearLayout
+    		android:orientation="horizontal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:background="@color/white">
+    	 <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        android:background="@color/white"
+        ads:adUnitId="ca-app-pub-9164569835667595/1923433465" />
+    	 </LinearLayout>
+</LinearLayout>
+
